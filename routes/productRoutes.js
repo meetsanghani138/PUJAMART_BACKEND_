@@ -50,7 +50,7 @@ router.post("/add", upload.single("image"), async (req, res) => {
       stock: req.body.stock,
       description: req.body.description,
       image: req.file
-        ? `${process.env.BASE_URL}/uploads/${req.file.filename}`
+        ? `uploads/${req.file.filename}`
         : ""
     });
 
